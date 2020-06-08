@@ -1,72 +1,116 @@
 # Project Overview
 
-## Super Project
+## FLORA: A Plant Search Application
 
 (url of project)
 
 ## Project Description
 
-Use this section to describe your final project and perhaps any links to relevant sites that help convey the concept and\or functionality.
+An application that allows users to search plants by their common name to render an image, the plant's scientific name, its drought tolerance, and its commercial availability.
 
-## API and Data Sample
-
-Specify the API you are using and include a link. Show us a snippet of JSON returned by your API so we know you can access it and get the info you need
 
 ```json
-insert json snippet wrapped in {}
+{
+        "author": null,
+        "bibliography": null,
+        "common_name": "whitebristle cottongrass",
+        "complete_data": false,
+        "family_common_name": "Sedge family",
+        "id": 134784,
+        "is_main_species": true,
+        "link": "http://trefle.io/api/plants/134784",
+        "main_species_id": null,
+        "scientific_name": "Eriophorum altaicum",
+        "slug": "eriophorum-altaicum",
+        "sources": [
+            {
+                "last_update": "2019-01-11T10:11:01",
+                "name": "USDA",
+                "source_url": "https://plants.usda.gov",
+                "species_id": 134784
+            }
+        ],
+        "status": "Unknown",
+        "synonym": false,
+        "type": "species",
+        "year": null
+    },
+    {
+        "author": null,
+        "bibliography": null,
+        "common_name": "manystem woolly sunflower",
+        "complete_data": false,
+        "family_common_name": "Aster family",
+        "id": 134863,
+        "is_main_species": true,
+        "link": "http://trefle.io/api/plants/134863",
+        "main_species_id": null,
+        "scientific_name": "Eriophyllum multicaule",
+        "slug": "eriophyllum-multicaule",
+        "sources": [
+            {
+                "last_update": "2019-01-11T10:11:09",
+                "name": "USDA",
+                "source_url": "https://plants.usda.gov",
+                "species_id": 134863
+            }
+        ],
+        "status": "Unknown",
+        "synonym": false,
+        "type": "species",
+        "year": null
+    }
 ```
 
 ## Wireframes
-[Super Project Wireframe] (insert url)
-Upload images of your wireframes to an image hosting site or add them to an assets folder in your repo and link them here with a description of each specific wireframe.
+[FLORA Wireframe] (https://wireframe.cc/VQ6qlH)
 
 ### MVP/PostMVP
-
-The functionality will then be divided into two separate lists: MPV and PostMVP.  Carefully decided what is placed into your MVP as the client will expect this functionality to be implemented upon project completion.  
-
 #### MVP 
-*These are examples only. Replace with your own MVP features.*
 
-- Find and use external api 
-- Render data on page 
-- Allow user to choose favorites 
+- Use Axios to make a request to the Trefle API for plant information. 
+- Create a search bar that recieves user input.
+- Render a search result that includes one image, the plant's common name, its scientific name, commericial availability and drought tolerance. 
+-Deploy site using GitHub Pages for live access. 
 
 #### PostMVP  
-*These are examples only. Replace with your own Post-MVP features.*
+-Create a media query for mobile devices. 
+-Allow for location-specific search criteria that allows users to see native plants for their location. 
+-Include a local storage capability so users can save plants they like in a list.
+-Refine styling
 
-- Add second API
-- Use local storage to save user favorites
 
 ## Project Schedule
 
-This schedule will be used to keep track of your progress throughout the week and align with our expectations.  
-
-You are **responsible** for scheduling time with your squad to seek approval for each deliverable by the end of the corresponding day, excluding `Saturday` and `Sunday`.
-
 |  Day | Deliverable | Status
 |---|---| ---|
-|June 8| Project Prompt | Incomplete
-|June 9| Wireframes / Priority Matrix / Timeframes | Incomplete
-|June 10| Core Application Structure (HTML, CSS, etc.) | Incomplete
-|June 11| Initial Clickable Model  | Incomplete
-|June 12| MVP | Incomplete
+|June 8| Project Overview | Incomplete
+|June 9| Basic HTML, Make API Request, Begin JS | Incomplete
+|June 10| Finish JS, Have searchable input with results, Begin CSS | Incomplete
+|June 11| Finish Basic CSS, Finish MVP | Incomplete
+|June 12| Post MVP: Media queries, Location-based filter, Explore local storage, Refine Styling.| Incomplete
 |June 15| Present | Incomplete
 
 ## Priority Matrix
 
-Include a full list of features that have been prioritized based on the `Time and Importance` Matrix.  Link this image in a similar manner to your wireframes
+[FLORA Priority Matrix] (https://app.conceptboard.com/board/ug3x-zmum-c2md-ibp1-conb)
 
 ## Timeframes
 
-Tell us how long you anticipate spending on each area of development. Be sure to consider how many hours a day you plan to be coding and how many days you have available until presentation day.
-
-Time frames are also key in the development cycle.  You have limited time to code all phases of the game.  Your estimates can then be used to evalute game possibilities based on time needed and the actual time you have before game must be submitted. It's always best to pad the time by a few hours so that you account for the unknown so add and additional hour or two to each component to play it safe. Throughout your project, keep track of your Time Invested and Actual Time and update your README regularly.
-
 | Component | Priority | Estimated Time | Time Invested | Actual Time |
 | --- | :---: |  :---: | :---: | :---: |
-| Adding Form | H | 3hrs| 3.5hrs | 3.5hrs |
-| Working with API | H | 3hrs| 2.5hrs | 2.5hrs |
-| Total | H | 6hrs| 5hrs | 5hrs |
+| Find API | H | 4hrs | 2hrs | 2 hrs|
+| Base HTML | H | 2hr | | |
+| Build Input/Search Bar | H | 3hrs| | |
+| Working with API | H | 5hrs | | |
+| Build Results | H | 3 hrs | | |
+| Styling with Flexbox | H | 4hrs | | |
+| Other CSS (fonts, background, color-scheme etc.) | H | 4hrs | | |
+| Post-MVP: Media query | H | 3 hrs | | |
+| Post-MVP: Location Filter | H | 4hrs | | |
+| Post-MVP: Local Storage | H | 6hrs | | |
+| Post-MVP: Refine CSS | H | 2 hrs| | | |
+| Total | H | | | |
 
 ## Code Snippet
 
