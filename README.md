@@ -75,7 +75,7 @@ Code Snippet:
 #### MVP 
 
 - Use Axios to make a request to the Trefle API for plant information. 
-- Create a search bar that recieves user input.
+- Create a drop-down selection that allows user to select species input.
 - Render a search result that includes one image, the plant's common name, its scientific name, commericial availability and drought tolerance. 
 - Deploy site using GitHub Pages for live access. 
 
@@ -92,7 +92,7 @@ Code Snippet:
 |---|---| ---|
 |June 8| Project Overview (No project URL, snippet or Change Log | COMPLETE
 |June 9| Basic HTML, Make API Request, Begin JS | Incomplete
-|June 10| Finish JS, Have searchable input with results, Begin CSS | Incomplete
+|June 10| Finish JS, Have selectable input with results, Begin CSS | Incomplete
 |June 11| Finish Basic CSS, Finish MVP, Update Project Overview, Begin Post-MVP | Incomplete
 |June 12| Post MVP: Media queries, Soil-based filter, Explore local storage, Refine Styling.| Incomplete
 |June 15| Present | Incomplete
@@ -116,7 +116,7 @@ Code Snippet:
 | Post-MVP: Soil Filter | H | 4 hrs | | |
 | Post-MVP: Local Storage | H | 6 hrs | | |
 | Post-MVP: Refine CSS | H | 2 hrs| | | |
-| Total | H | | | |
+| Total | H | 40| | |
 
 ## Code Snippet
 
@@ -124,4 +124,4 @@ TBD
 
 ## Change Log
 
-TBD
+- Search Bar chaned to dropdown selection
