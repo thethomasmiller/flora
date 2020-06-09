@@ -116,7 +116,7 @@ Code Snippet:
 | Post-MVP: Soil Filter | H | 4 hrs | | |
 | Post-MVP: Local Storage | H | 6 hrs | | |
 | Post-MVP: Refine CSS | H | 2 hrs| | | |
-| Total | H | 40| | |
+| Total | H | 40 hrs| | |
 
 ## Code Snippet
 
