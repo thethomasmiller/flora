@@ -8,6 +8,12 @@
 
 An application that allows users to search plants by their common name to render an image, the plant's scientific name, its drought tolerance, and its commercial availability.
 
+## API and Data Sample
+
+#API: 
+[Trefle](https://trefle.io/)
+
+#Code Snippet:
 
 ```json
 {
