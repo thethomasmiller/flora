@@ -90,10 +90,10 @@ Code Snippet:
 
 |  Day | Deliverable | Status
 |---|---| ---|
-|June 8| Project Overview | Incomplete
+|June 8| Project Overview (No project URL, snippet or Change Log | COMPLETE
 |June 9| Basic HTML, Make API Request, Begin JS | Incomplete
 |June 10| Finish JS, Have searchable input with results, Begin CSS | Incomplete
-|June 11| Finish Basic CSS, Finish MVP | Incomplete
+|June 11| Finish Basic CSS, Finish MVP, Update Project Overview | Incomplete
 |June 12| Post MVP: Media queries, Location-based filter, Explore local storage, Refine Styling.| Incomplete
 |June 15| Present | Incomplete
 
