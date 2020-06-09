@@ -1,0 +1,10 @@
+
+body {
+  background-image: url('https://images.unsplash.com/photo-1529143503127-c95bdeee219a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80');
+  font-family: 'Raleway', sans-serif;
+  color: white;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+}
