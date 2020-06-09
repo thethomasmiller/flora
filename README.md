@@ -81,7 +81,7 @@ Code Snippet:
 
 #### PostMVP  
 - Create a media query for mobile devices. 
-- Allow for location-specific search criteria that allows users to see native plants for their location. 
+- Allow for location-specific search criteria that allows users to see native plants for their local soil type. 
 - Include a local storage capability so users can save plants they like in a list.
 - Refine styling
 
@@ -94,7 +94,7 @@ Code Snippet:
 |June 9| Basic HTML, Make API Request, Begin JS | Incomplete
 |June 10| Finish JS, Have searchable input with results, Begin CSS | Incomplete
 |June 11| Finish Basic CSS, Finish MVP, Update Project Overview | Incomplete
-|June 12| Post MVP: Media queries, Location-based filter, Explore local storage, Refine Styling.| Incomplete
+|June 12| Post MVP: Media queries, Soil-based filter, Explore local storage, Refine Styling.| Incomplete
 |June 15| Present | Incomplete
 
 ## Priority Matrix
@@ -113,7 +113,7 @@ Code Snippet:
 | Styling with Flexbox | H | 4 hrs | | |
 | Other CSS (fonts, background, color-scheme etc.) | H | 4 hrs | | |
 | Post-MVP: Media query | H | 3 hrs | | |
-| Post-MVP: Location Filter | H | 4 hrs | | |
+| Post-MVP: Soil Filter | H | 4 hrs | | |
 | Post-MVP: Local Storage | H | 6 hrs | | |
 | Post-MVP: Refine CSS | H | 2 hrs| | | |
 | Total | H | | | |
