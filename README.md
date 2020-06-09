@@ -69,7 +69,7 @@ An application that allows users to search plants by their common name to render
 ```
 
 ## Wireframes
-[FLORA Wireframe] (https://wireframe.cc/VQ6qlH)
+[FLORA Wireframe](https://wireframe.cc/VQ6qlH)
 
 ### MVP/PostMVP
 #### MVP 
@@ -99,7 +99,7 @@ An application that allows users to search plants by their common name to render
 
 ## Priority Matrix
 
-[FLORA Priority Matrix] (https://app.conceptboard.com/board/ug3x-zmum-c2md-ibp1-conb)
+[FLORA Priority Matrix](https://app.conceptboard.com/board/ug3x-zmum-c2md-ibp1-conb)
 
 ## Timeframes
 
@@ -120,13 +120,8 @@ An application that allows users to search plants by their common name to render
 
 ## Code Snippet
 
-Use this section to include a brief code snippet of functionality that you are proud of and a brief description.  
-
-```
-function reverse(string) {
-	// here is the code to reverse a string of text
-}
-```
+TBD
 
 ## Change Log
- Use this section to document what changes were made and the reasoning behind those changes.  
+
+TBD
