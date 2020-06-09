@@ -106,9 +106,9 @@ Code Snippet:
 | Component | Priority | Estimated Time | Time Invested | Actual Time |
 | --- | :---: |  :---: | :---: | :---: |
 | Find API | H | 4 hrs | 2 hrs | 2 hrs|
-| Base HTML | H | 2 hr | | |
-| Build Input/Search Bar | H | 3 hrs| | |
-| Working with API | H | 5 hrs | | |
+| Base HTML | H | 2 hr | 1hr | |
+| Build Input/Search Bar | H | 3 hrs| 30min | |
+| Working with API | H | 5 hrs | 5 hrs | |
 | Build Results | H | 3 hrs | | |
 | Styling with Flexbox | H | 4 hrs | | |
 | Other CSS (fonts, background, color-scheme etc.) | H | 4 hrs | | |
