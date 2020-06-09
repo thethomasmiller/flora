@@ -77,13 +77,13 @@ Code Snippet:
 - Use Axios to make a request to the Trefle API for plant information. 
 - Create a search bar that recieves user input.
 - Render a search result that includes one image, the plant's common name, its scientific name, commericial availability and drought tolerance. 
--Deploy site using GitHub Pages for live access. 
+- Deploy site using GitHub Pages for live access. 
 
 #### PostMVP  
--Create a media query for mobile devices. 
--Allow for location-specific search criteria that allows users to see native plants for their location. 
--Include a local storage capability so users can save plants they like in a list.
--Refine styling
+- Create a media query for mobile devices. 
+- Allow for location-specific search criteria that allows users to see native plants for their location. 
+- Include a local storage capability so users can save plants they like in a list.
+- Refine styling
 
 
 ## Project Schedule
