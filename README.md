@@ -10,10 +10,10 @@ An application that allows users to search plants by their common name to render
 
 ## API and Data Sample
 
-#API: 
+API: 
 [Trefle](https://trefle.io/)
 
-#Code Snippet:
+Code Snippet:
 
 ```json
 {
@@ -105,16 +105,16 @@ An application that allows users to search plants by their common name to render
 
 | Component | Priority | Estimated Time | Time Invested | Actual Time |
 | --- | :---: |  :---: | :---: | :---: |
-| Find API | H | 4hrs | 2hrs | 2 hrs|
-| Base HTML | H | 2hr | | |
-| Build Input/Search Bar | H | 3hrs| | |
-| Working with API | H | 5hrs | | |
+| Find API | H | 4 hrs | 2 hrs | 2 hrs|
+| Base HTML | H | 2 hr | | |
+| Build Input/Search Bar | H | 3 hrs| | |
+| Working with API | H | 5 hrs | | |
 | Build Results | H | 3 hrs | | |
-| Styling with Flexbox | H | 4hrs | | |
-| Other CSS (fonts, background, color-scheme etc.) | H | 4hrs | | |
+| Styling with Flexbox | H | 4 hrs | | |
+| Other CSS (fonts, background, color-scheme etc.) | H | 4 hrs | | |
 | Post-MVP: Media query | H | 3 hrs | | |
-| Post-MVP: Location Filter | H | 4hrs | | |
-| Post-MVP: Local Storage | H | 6hrs | | |
+| Post-MVP: Location Filter | H | 4 hrs | | |
+| Post-MVP: Local Storage | H | 6 hrs | | |
 | Post-MVP: Refine CSS | H | 2 hrs| | | |
 | Total | H | | | |
 
