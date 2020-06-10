@@ -5,6 +5,9 @@ body {
   
   font-family: 'Raleway', sans-serif;
   color: white;
+}
+
+.header {
   display: flex;
   flex-flow: column;
   justify-content: center;
