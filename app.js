@@ -57,8 +57,7 @@ async function getPlant(plantId) {
     let response = await axios.get(`https://trefle.io/api/plants/${plantId}?token=TVNmand1NnNNOUx5ZjBMcW1hbzlUUT09`)
     console.log(response)
   
-    // removePic()
-    // dogPic(dogURL)
+  
   } catch (error) {
     console.log(`Error: ${error}`)
   }
