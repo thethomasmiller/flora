@@ -91,7 +91,7 @@ Code Snippet:
 |  Day | Deliverable | Status
 |---|---| ---|
 |June 8| Project Overview (No project URL, snippet or Change Log | COMPLETE
-|June 9| Basic HTML, Make API Request, Begin JS | Incomplete
+|June 9| Basic HTML, Make API Request, Begin JS | COMPLETE
 |June 10| Finish JS, Have selectable input with results, Begin CSS | Incomplete
 |June 11| Finish Basic CSS, Finish MVP, Update Project Overview, Begin Post-MVP | Incomplete
 |June 12| Post MVP: Media queries, Soil-based filter, Explore local storage, Refine Styling.| Incomplete
@@ -106,9 +106,9 @@ Code Snippet:
 | Component | Priority | Estimated Time | Time Invested | Actual Time |
 | --- | :---: |  :---: | :---: | :---: |
 | Find API | H | 4 hrs | 2 hrs | 2 hrs|
-| Base HTML | H | 2 hr | | |
-| Build Input/Search Bar | H | 3 hrs| | |
-| Working with API | H | 5 hrs | | |
+| Base HTML | H | 2 hr | 1hr | |
+| Build Input/Search Bar | H | 3 hrs| 30min | |
+| Working with API | H | 5 hrs | 5 hrs | |
 | Build Results | H | 3 hrs | | |
 | Styling with Flexbox | H | 4 hrs | | |
 | Other CSS (fonts, background, color-scheme etc.) | H | 4 hrs | | |
