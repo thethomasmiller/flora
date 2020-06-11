@@ -1,29 +1,30 @@
 
-
+// CREATE DROPDOWN ------------------------------------------------
 getDropdown = async () => {
   try {
-    let base_url = 'https://trefle.io/api/plants?page_size=1000&token=TVNmand1NnNNOUx5ZjBMcW1hbzlUUT09'
+    const base_url = 'https://trefle.io/api/species?page_size=259&token=TVNmand1NnNNOUx5ZjBMcW1hbzlUUT09'
 
-    let response = await axios.get(`${base_url}`)
-    // console.log(response)
-    let plantList = response.data
+    const response = await axios.get(`${base_url}`)
+    console.log(response)
+    const allPlants = response.data
     // console.log(plantList)
-    let plantNames = new Set(plantList.map(seed => {
-    if (seed.common_name !== null || undefined)
-      { return seed.common_name }
+
+    //Retrieving the plant names for the dropdown
+  
+    let namedPlants = allPlants.filter((plant) => {
+        return plant.common_name !== null && plant.is_main_species
+    })
+    let plantNames = new Set(namedPlants.map(plant => {
+      return plant.common_name
     }))
-    let completePlants = plantList.filter((seed) => {
-        return seed.common_name !== null && seed.author !== null
-      })
-    console.log(completePlants)
-      
-    // console.log(plantNames)
+    console.log(namedPlants)
+    console.log(plantNames)
 
     const select = document.querySelector('select')
-    plantNames.forEach((plant) => {
+    namedPlants.forEach((plant) => {
       const option = document.createElement('option')
-      option.value = `${plant}`
-      option.text = `${plant}`
+      option.value = `${plant.id}`
+      option.text = `${plant.common_name}`
       select.append(option)
     })
     
@@ -34,32 +35,67 @@ getDropdown = async () => {
 getDropdown()
 
 
-// Add Submit Function ////////////////////////////////////////////////////
-
+//Submit Selected Plant on Click --------------------------------
 
 function plantValue(e) {
   e.preventDefault()
   const getDropdown = document.querySelector('#select-plant')
   const selectValue = getDropdown.value
-  console.log(selectValue)
+
+  console.log(`This is my ${selectValue}`)
   getPlant(selectValue)
 }
 
 const form = document.querySelector('form')
 form.addEventListener('submit', plantValue)
 
-// Add ////////////////////////////////////////////////////
-
-
+//Get Plant Id --------------------------------------------------
 
 async function getPlant(plantId) {
   try {
     let response = await axios.get(`https://trefle.io/api/plants/${plantId}?token=TVNmand1NnNNOUx5ZjBMcW1hbzlUUT09`)
-    console.log(response)
-  
-  
+    
+    let getScientificName = response.data.scientific_name
+    let getCommonName = response.data.common_name
+    
+    console.log(getScientificName)
+    
+    removeCommonName
+    removeScientificName()
+    commonName(getCommonName)
+    scientificName(getScientificName)
+   
   } catch (error) {
     console.log(`Error: ${error}`)
+  }
+    
+}
+//Render the selected plant's scientific name to the DOM --------
+function commonName(getCommonName) {
+  const comName = document.createElement('p')
+  comName.innerText = getCommonName
+  document.querySelector('#append-plant').append(comName)
+}
+
+function scientificName(getScientificName) {
+  const sciName = document.createElement('p')
+  sciName.innerText = getScientificName
+  document.querySelector('#append-plant').append(sciName)
+}
+
+function removeCommonName() {
+  const oldCommonName = document.querySelector('#append-plant')
+  while (oldCommonName.lastChild) {
+    oldScientificName.removeChild(oldCommonName.lastChild)
+  }
+}
+
+
+
+function removeScientificName() {
+  const oldScientificName = document.querySelector('#append-plant')
+  while (oldScientificName.lastChild) {
+    oldScientificName.removeChild(oldScientificName.lastChild)
   }
 }
 
@@ -69,10 +105,32 @@ async function getPlant(plantId) {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // CODE GRAVEYARD 
+
+// const plantNames = new Set(allPlants.map(plant => {
+    // if (plant.common_name !== null && plant.common_name !== undefined)
+    //   { return plant.common_name}
+    // }))
+    // console.log(plantNames)
+
 // async function getID(plantid) {
 //   try {
-    
 //   } catch (error) {
 //     console.log(`Error: ${error}`)
 //   }
