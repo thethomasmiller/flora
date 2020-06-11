@@ -2,12 +2,11 @@
 // CREATE DROPDOWN ------------------------------------------------
 getDropdown = async () => {
   try {
-    const base_url = 'https://trefle.io/api/species?page_size=259&token=TVNmand1NnNNOUx5ZjBMcW1hbzlUUT09'
+    const base_url = 'https://trefle.io/api/species?page_size=2000&token=TVNmand1NnNNOUx5ZjBMcW1hbzlUUT09'
 
     const response = await axios.get(`${base_url}`)
     console.log(response)
     const allPlants = response.data
-    // console.log(plantList)
 
     //Retrieving the plant names for the dropdown
   
@@ -59,39 +58,43 @@ async function getPlant(plantId) {
     let getCommonName = response.data.common_name
     
     console.log(getScientificName)
-    
-    removeCommonName
+    console.log(response)
     removeScientificName()
-    commonName(getCommonName)
+    removeCommonName
+    
+    
     scientificName(getScientificName)
+    commonName(getCommonName)
    
   } catch (error) {
     console.log(`Error: ${error}`)
   }
     
 }
-//Render the selected plant's scientific name to the DOM --------
+
+//Render the selected plant's common name to the DO ----------
 function commonName(getCommonName) {
   const comName = document.createElement('p')
   comName.innerText = getCommonName
+  comName.setAttribute('id', 'common-name')
   document.querySelector('#append-plant').append(comName)
 }
-
+//Render the selected plant's scientific name to the DOM --------
 function scientificName(getScientificName) {
   const sciName = document.createElement('p')
   sciName.innerText = getScientificName
+  sciName.setAttribute('id','scientific-name')
   document.querySelector('#append-plant').append(sciName)
 }
 
+//Remove the previously selected plant's Common Name -------------
 function removeCommonName() {
   const oldCommonName = document.querySelector('#append-plant')
   while (oldCommonName.lastChild) {
     oldScientificName.removeChild(oldCommonName.lastChild)
   }
 }
-
-
-
+//Remove the previously selected plant's Scientific Name ----------
 function removeScientificName() {
   const oldScientificName = document.querySelector('#append-plant')
   while (oldScientificName.lastChild) {

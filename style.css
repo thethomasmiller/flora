@@ -1,15 +1,64 @@
 
 body {
-  background-image: url('https://images.unsplash.com/photo-1529143503127-c95bdeee219a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80');
-  background-attachment: scroll;
-  
-  font-family: 'Raleway', sans-serif;
-  color: white;
-}
-
-.header {
   display: flex;
   flex-flow: column;
   justify-content: center;
   align-items: center;
+  
+  background-image: url('https://images.unsplash.com/photo-1529143503127-c95bdeee219a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80');
+  background-attachment: fixed;
+  background-size: cover;
+  
+  font-family: 'Raleway', sans-serif;
+  color: yellow;
+}
+h1{
+  font-size: 75px;
+  margin-top: 10%;
+  letter-spacing: 25px;
+  border: yellow;
+  border-style: solid;
+  padding: 15px;
+}
+
+#select-plant {
+  font-family: 'Raleway', sans-serif;
+  font-size: 25px;
+  font-variant-caps: all-small-caps;
+  text-align: center;
+  background-color: transparent;
+  color: wt;
+  border-color: white;
+  border-style: solid;
+  text-align: center;
+
+}
+
+#button {
+  font-family: 'Raleway', sans-serif;
+  font-size: 25px;
+  font-variant: small-caps;
+  background-color: transparent;
+  color: white;
+  border-style: solid;
+  border-color: white;
+}
+
+#append-plant {
+  display: flex;
+  flex-flow: column;
+  justify-content: space-around;
+  align-items: center;
+  font-size: 100px;
+  font-weight: bold;
+}
+
+#common-name{
+  font-variant-caps: all-small-caps;
+  font-weight: 45px;
+}
+
+#scientific-name{
+  font-style: italic;
+  font-weight: 25px;
 }
