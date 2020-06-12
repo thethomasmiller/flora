@@ -6,7 +6,7 @@
 
 ## Project Description
 
-An application that allows users to search plants by their common name to render an image, the plant's scientific name, its drought tolerance, and its commercial availability.
+An application that allows users to select plants by their common name to render an image, the plant's scientific name, its family name, and duration (if provided). Plants without images will display a default image.
 
 ## API and Data Sample
 
@@ -76,7 +76,8 @@ Code Snippet:
 
 - Use Axios to make a request to the Trefle API for plant information. 
 - Create a drop-down selection that allows user to select species input.
-- Render a search result that includes one image, the plant's common name, its scientific name, commericial availability and drought tolerance. 
+- Render a search result that includes one image, the plant's common name, its scientific name, family name and duration(if available).
+- Plants without images will display a default image for a consistent result appearance.  
 - Deploy site using GitHub Pages for live access. 
 
 #### PostMVP  
@@ -125,3 +126,5 @@ TBD
 ## Change Log
 
 - Search Bar changed to dropdown selection
+- Updated information displayed to Family Name and Duration(if available) to provide a more taxonomic focus. 
+- Added a default image condidtion if an image is unavailable in order to keep the appearance of the results content consistent.
