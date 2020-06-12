@@ -1,5 +1,5 @@
-let appendPlant = document.getElementById('append-plant')
 // CREATE DROPDOWN ------------------------------------------------
+
 getDropdown = async () => {
   try {
     const base_url = 'https://trefle.io/api/species?page_size=2000&token=TVNmand1NnNNOUx5ZjBMcW1hbzlUUT09'
@@ -8,7 +8,7 @@ getDropdown = async () => {
     console.log(response)
     const allPlants = response.data
 
-    //Retrieving the plant names for the dropdown
+    //Retrieve the plant names for the dropdown
   
     let namedPlants = allPlants.filter((plant) => {
         return plant.common_name !== null && plant.is_main_species
@@ -50,33 +50,44 @@ form.addEventListener('submit', plantValue)
 
 //Get Plant Id --------------------------------------------------
 // let appendPlant = document.querySelector('#append-plant')
+let apiImageURL = "https://images.unsplash.com/photo-1463936575829-25148e1db1b8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1090&q=80"
+
 async function getPlant(plantId) {
   try {
     let response = await axios.get(`https://trefle.io/api/plants/${plantId}?token=TVNmand1NnNNOUx5ZjBMcW1hbzlUUT09`)
-    
+    console.log(response)
+
     let getScientificName = response.data.scientific_name
     let getCommonName = response.data.common_name
     let getImage = response.data.images
-    if (getImage.length === 0) {
-      console.log('WORKING')
-      // plantImage()
-      const image = document.createElement('img')
-      appendPlant.append(image)
-    }
-    else {
-      let getImage = response.data.images[0]
-      plantImage(getImage)
-    }
-    console.log("LOOK HERE", getImage)
-
-    console.log(getScientificName)
-    console.log(response)
+    console.log(getImage[0])
+    apiImageURL = getImage[0]? getImage[0].url : "https://images.unsplash.com/photo-1463936575829-25148e1db1b8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1090&q=80"
+    
+    // if (getImage === 0) {
+    //   // console.log('WORKING')  
+    //   plantImage(defaultPic)
+    // }
+    // else {
+    //   plantImage(apiImageURL)
+    // }
+    // console.log(apiImageURL)
+    // console.log(getScientificName)
+    
+    // if (apiImageURL) { plantImage(apiImageURL) }
+    // else {
+    //   console.log("WHAT YOU GET")
+    // }
+    
+    
+    
+    
     removeScientificName()
     removeCommonName()
-    
-    
-    // scientificName(getScientificName)
-    // commonName(getCommonName)
+    removePlantImage()
+
+    scientificName(getScientificName)
+    commonName(getCommonName)
+    plantImage(apiImageURL)
     
   } catch (error) {
     console.log(`Error: ${error}`)
@@ -84,7 +95,7 @@ async function getPlant(plantId) {
     
 }
 
-//Render the selected plant's common name to the DO ----------
+//Render the selected plant's common name to the DOM ----------
 function commonName(getCommonName) {
   const comName = document.createElement('p')
   comName.innerText = getCommonName
@@ -99,15 +110,17 @@ function scientificName(getScientificName) {
   document.querySelector('#append-plant').append(sciName)
 }
 //Render image of selected plant to the DOM ----------------------
-function plantImage(image) {
-  const img = document.createElement('img')
+function plantImage(apiImageURL) {
+  console.log(apiImageURL)
+  let img = document.createElement('img')
   console.log(img)
-  // img.src = image
-  // img.style.width = '300px'
-  // img.style.height = 'auto'
-  // let appendPlant = document.querySelector('#append-plant')
-  console.log(appendPlant)
-  appendPlant.appendChild(img)
+  let div = document.querySelector('#plant-image-container')
+  div.append(img)
+  console.log(document.querySelector('#plant-image-container'))
+  img.src = apiImageURL
+  img.style.width = '300px'
+  img.style.height = 'auto'
+  // img.setAttribute('id', 'plant-image')
  }
 
 //Remove the previously selected plant's Common Name -------------
@@ -122,6 +135,12 @@ function removeScientificName() {
   const oldScientificName = document.querySelector('#append-plant')
   while (oldScientificName.lastChild) {
     oldScientificName.removeChild(oldScientificName.lastChild)
+  }
+}
+function removePlantImage() {
+  const oldPlantImage = document.querySelector('#plant-image-container')
+  while (oldPlantImage.lastChild) {
+    oldPlantImage.removeChild(oldPlantImage.lastChild)
   }
 }
 
