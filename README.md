@@ -108,10 +108,10 @@ Code Snippet:
 | Find API | H | 4 hrs | 2 hrs | 2 hrs|
 | Base HTML | H | 2 hr | 1hr | |
 | Build Input/Search Bar | H | 3 hrs| 30min | |
-| Working with API | H | 5 hrs | 5 hrs | |
-| Build Results | H | 3 hrs | 5 hrs | |
-| Styling with Flexbox | H | 4 hrs | | |
-| Other CSS (fonts, background, color-scheme etc.) | H | 4 hrs | | |
+| Working with API | H | 5 hrs | 10 hrs | |
+| Build Results | H | 3 hrs | 3 hrs | |
+| Styling with Flexbox | H | 4 hrs | 1hr | |
+| Other CSS (fonts, background, color-scheme etc.) | H | 4 hrs | 1hr | |
 | Post-MVP: Media query | H | 3 hrs | | |
 | Post-MVP: Soil Filter | H | 4 hrs | | |
 | Post-MVP: Local Storage | H | 6 hrs | | |
@@ -124,4 +124,4 @@ TBD
 
 ## Change Log
 
-- Search Bar chaned to dropdown selection
+- Search Bar changed to dropdown selection
