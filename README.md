@@ -94,7 +94,7 @@ Code Snippet:
 |June 8| Project Overview (No project URL, snippet or Change Log | COMPLETE
 |June 9| Basic HTML, Make API Request, Begin JS | COMPLETE
 |June 10| Have selectable input with results, Begin CSS | COMPLETE
-|June 11| Finish JS, Finish Basic CSS, Finish MVP, Update Project Overview,  | Incomplete
+|June 11| Finish JS, Finish Basic CSS, Finish MVP, Update Project Overview,  | COMPLETE
 |June 12| Post MVP: Media queries, Soil-based filter, Explore local storage, Refine Styling.| Incomplete
 |June 15| Present | Incomplete
 
@@ -107,17 +107,17 @@ Code Snippet:
 | Component | Priority | Estimated Time | Time Invested | Actual Time |
 | --- | :---: |  :---: | :---: | :---: |
 | Find API | H | 4 hrs | 2 hrs | 2 hrs|
-| Base HTML | H | 2 hr | 1hr | |
-| Build Input/Search Bar | H | 3 hrs| 30min | |
-| Working with API | H | 5 hrs | 10 hrs | |
-| Build Results | H | 3 hrs | 3 hrs | |
-| Styling with Flexbox | H | 4 hrs | 1hr | |
-| Other CSS (fonts, background, color-scheme etc.) | H | 4 hrs | 1hr | |
+| Base HTML | H | 2 hr | 1 hr | 1 hr |
+| Build Input/Search Bar | H | 3 hrs| 0.5 hr  | 0.5 hr |
+| Working with API | H | 5 hrs | 5 hrs | 5 hrs |
+| Build Results | H | 3 hrs | 20 hrs | 20 hrs |
+| Styling with Flexbox | H | 4 hrs | 2 hrs | 2 hrs |
+| Other CSS (fonts, background, color-scheme etc.) | H | 4 hrs | 3 hrs | 3 hrs |
 | Post-MVP: Media query | H | 3 hrs | | |
 | Post-MVP: Soil Filter | H | 4 hrs | | |
 | Post-MVP: Local Storage | H | 6 hrs | | |
 | Post-MVP: Refine CSS | H | 2 hrs| | | |
-| Total | H | 40 hrs| | |
+| Total | H | 40 hrs| 33.5 hrs | |
 
 ## Code Snippet
 
@@ -126,5 +126,5 @@ TBD
 ## Change Log
 
 - Search Bar changed to dropdown selection
-- Updated information displayed to Family Name and Duration(if available) to provide a more taxonomic focus. 
+- Updated information displayed to Family Common Name and Duration (if available) to provide a more taxonomic focus. 
 - Added a default image condidtion if an image is unavailable in order to keep the appearance of the results content consistent.
