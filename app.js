@@ -63,24 +63,6 @@ async function getPlant(plantId) {
     console.log(getImage[0])
     apiImageURL = getImage[0]? getImage[0].url : "https://images.unsplash.com/photo-1463936575829-25148e1db1b8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1090&q=80"
     
-    // if (getImage === 0) {
-    //   // console.log('WORKING')  
-    //   plantImage(defaultPic)
-    // }
-    // else {
-    //   plantImage(apiImageURL)
-    // }
-    // console.log(apiImageURL)
-    // console.log(getScientificName)
-    
-    // if (apiImageURL) { plantImage(apiImageURL) }
-    // else {
-    //   console.log("WHAT YOU GET")
-    // }
-    
-    
-    
-    
     removeScientificName()
     removeCommonName()
     removePlantImage()

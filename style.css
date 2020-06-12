@@ -9,6 +9,7 @@ body {
   background-attachment: fixed;
   background-size: cover;
   
+  
   font-family: 'Raleway', sans-serif;
   color: yellow;
 }
@@ -21,11 +22,21 @@ h1{
   padding: 15px;
 }
 
+.dropdown-and-button {
+  display: flex;
+}
+
+
+
+
 .results {
 display: flex;
+align-content: justify;
+align-items: center;
 flex-flow: wrap;
-background:black;
-
+border: chartreuse;
+border-style: solid;
+border-width: 2px;
 }
 
 #select-plant {
@@ -33,11 +44,13 @@ background:black;
   font-size: 25px;
   font-variant-caps: all-small-caps;
   text-align: center;
-  background-color: transparent;
+  background-color:transparent;
   color: white;
   border-color: white;
   border-style: solid;
+  border-width: 2px;
   text-align: center;
+  margin: 25px;
 
 }
 
@@ -45,27 +58,57 @@ background:black;
   font-family: 'Raleway', sans-serif;
   font-size: 25px;
   font-variant: small-caps;
-  background-color: transparent;
+  background-color:transparent;
   color: white;
   border-style: solid;
   border-color: white;
+  align-self: center;
 }
 
 #append-plant {
-  display: flex;
+  /* display: flex;
   flex-flow: column;
   justify-content: space-around;
-  align-items: center;
+  align-items: center; */
   font-size: 25px;
   font-weight: bold;
+  padding: 25px;
+  margin: 25px;
+}
+
+#plant-image-container{
+  padding: 15px;
 }
 
 #common-name{
   font-variant-caps: all-small-caps;
   font-weight: 45px;
+  text-align: center;
+  background: black;
+  
+  padding: 5px;
 }
 
 #scientific-name{
   font-style: italic;
   font-weight: 25px;
+  text-align: center;
+  background-color: black;
+  padding: 5px;
+}
+
+@media only screen and (max-width: 600px) {
+h1{
+  font-size: 25px;
+}
+#button,
+#select-plant{
+  font-size: 15px;
+}
+
+#common-name,
+#scientific-name{
+  font-size: 15px;
+}
+
 }
