@@ -1,4 +1,4 @@
-
+let appendPlant = document.getElementById('append-plant')
 // CREATE DROPDOWN ------------------------------------------------
 getDropdown = async () => {
   try {
@@ -18,7 +18,7 @@ getDropdown = async () => {
     }))
     console.log(namedPlants)
     console.log(plantNames)
-
+ 
     const select = document.querySelector('select')
     namedPlants.forEach((plant) => {
       const option = document.createElement('option')
@@ -41,7 +41,7 @@ function plantValue(e) {
   const getDropdown = document.querySelector('#select-plant')
   const selectValue = getDropdown.value
 
-  console.log(`This is my ${selectValue}`)
+  console.log(`This is the selected plant's ID ${selectValue}`)
   getPlant(selectValue)
 }
 
@@ -49,23 +49,35 @@ const form = document.querySelector('form')
 form.addEventListener('submit', plantValue)
 
 //Get Plant Id --------------------------------------------------
-
+// let appendPlant = document.querySelector('#append-plant')
 async function getPlant(plantId) {
   try {
     let response = await axios.get(`https://trefle.io/api/plants/${plantId}?token=TVNmand1NnNNOUx5ZjBMcW1hbzlUUT09`)
     
     let getScientificName = response.data.scientific_name
     let getCommonName = response.data.common_name
-    
+    let getImage = response.data.images
+    if (getImage.length === 0) {
+      console.log('WORKING')
+      // plantImage()
+      const image = document.createElement('img')
+      appendPlant.append(image)
+    }
+    else {
+      let getImage = response.data.images[0]
+      plantImage(getImage)
+    }
+    console.log("LOOK HERE", getImage)
+
     console.log(getScientificName)
     console.log(response)
     removeScientificName()
-    removeCommonName
+    removeCommonName()
     
     
-    scientificName(getScientificName)
-    commonName(getCommonName)
-   
+    // scientificName(getScientificName)
+    // commonName(getCommonName)
+    
   } catch (error) {
     console.log(`Error: ${error}`)
   }
@@ -86,12 +98,23 @@ function scientificName(getScientificName) {
   sciName.setAttribute('id','scientific-name')
   document.querySelector('#append-plant').append(sciName)
 }
+//Render image of selected plant to the DOM ----------------------
+function plantImage(image) {
+  const img = document.createElement('img')
+  console.log(img)
+  // img.src = image
+  // img.style.width = '300px'
+  // img.style.height = 'auto'
+  // let appendPlant = document.querySelector('#append-plant')
+  console.log(appendPlant)
+  appendPlant.appendChild(img)
+ }
 
 //Remove the previously selected plant's Common Name -------------
 function removeCommonName() {
   const oldCommonName = document.querySelector('#append-plant')
   while (oldCommonName.lastChild) {
-    oldScientificName.removeChild(oldCommonName.lastChild)
+    oldCommonName.removeChild(oldCommonName.lastChild)
   }
 }
 //Remove the previously selected plant's Scientific Name ----------
