@@ -13,14 +13,14 @@ body {
   background-attachment: fixed;
   background-size: cover;
   font-family: 'Raleway', sans-serif;
-  color: yellow;
+  color: rgb(250,237,39);
 }
 
 h1{
   font-size: 75px;
   margin-top: 10%;
   letter-spacing: 25px;
-  border: yellow;
+  border: rgb(250,237,39);
   border-style: solid;
   padding: 15px;
 }
@@ -109,7 +109,7 @@ footer {
 }
 
 a {
-  color: yellow;
+  color:rgb(250,237,39);
   text-decoration: none;
 }
 
