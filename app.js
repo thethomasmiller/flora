@@ -2,7 +2,7 @@
 
 getDropdown = async () => {
   try {
-    const base_url = 'https://trefle.io/api/species?page_size=2000&token=TVNmand1NnNNOUx5ZjBMcW1hbzlUUT09'
+    const base_url = 'https://cors-anywhere.herokuapp.com/https://trefle.io/api/species?page_size=2000&token=TVNmand1NnNNOUx5ZjBMcW1hbzlUUT09'
 
     const response = await axios.get(`${base_url}`)
   
@@ -44,7 +44,7 @@ form.addEventListener('submit', plantValue)
 
 async function getPlant(plantId) {
   try {
-    let response = await axios.get(`https://trefle.io/api/plants/${plantId}?token=TVNmand1NnNNOUx5ZjBMcW1hbzlUUT09`)
+    let response = await axios.get(`https://cors-anywhere.herokuapp.com/https://trefle.io/api/plants/${plantId}?token=TVNmand1NnNNOUx5ZjBMcW1hbzlUUT09`)
 
     let getScientificName = response.data.scientific_name
     let getCommonName = response.data.common_name
@@ -109,8 +109,6 @@ function plantImage(apiImageURL) {
   let div = document.querySelector('#plant-image-container')
   div.append(img) 
   img.src = apiImageURL
-  // img.style.width = '300px'
-  // img.style.height = 'auto'
  }
 
 //Remove the previously selected plant's Common Name -------------
