@@ -70,7 +70,6 @@ async function getPlant(plantId) {
     
 }
 
-
 //Render the selected plant's common name to the DOM ----------
 function commonName(getCommonName) {
   const comName = document.createElement('p')
