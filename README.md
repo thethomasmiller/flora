@@ -117,7 +117,7 @@ Code Snippet:
 | Post-MVP: Media query | H | 3 hrs | 1 hr | 1 hr |
 | Post-MVP: Soil Filter | H | 4 hrs | 0 hr| 0 hr|
 | Post-MVP: Local Storage | H | 6 hrs | 0 hr| 0 hr|
-| Post-MVP: Refine CSS | H | 2 hrs| | 2 hrs | 2 hrs |
+| Post-MVP: Refine CSS | H | 2 hrs | 2 hrs | 2 hrs |
 | Total | H | 40 hrs| 43.5 hrs | 43.5 |
 
 ## Code Snippet
