@@ -2,7 +2,7 @@
 
 ## FLORA: A Plant Search Application
 
-(url of project)
+[FLORA](https://pages.git.generalassemb.ly/tsmiller19/FLORA/)
 
 ## Project Description
 
