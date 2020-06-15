@@ -2,7 +2,7 @@
 
 ## FLORA: A Plant Search Application
 
-[FLORA](https://pages.git.generalassemb.ly/tsmiller19/FLORA/)
+[F L O R A](https://pages.git.generalassemb.ly/tsmiller19/FLORA/)
 
 ## Project Description
 
@@ -97,7 +97,7 @@ Code Snippet:
 |June 10| Have selectable input with results, Begin CSS | COMPLETE
 |June 11| Finish JS, Finish Basic CSS, Finish MVP, Update Project Overview,  | COMPLETE
 |June 12| Post MVP: 1. Media queries 2. Soil-based filter 3. Explore local storage, 4. Refine Styling.| 1 & 4 COMPLETE
-|June 15| Present | Incomplete
+|June 15| Present | COMPLETE
 
 ## Priority Matrix
 
