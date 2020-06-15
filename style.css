@@ -4,15 +4,18 @@ body {
   flex-flow: column;
   justify-content: center;
   align-items: center;
-  
-  background-image: url('https://images.unsplash.com/photo-1529143503127-c95bdeee219a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80');
+  background:
+  linear-gradient(
+    rgba(230, 129, 129, 0.20),
+    rgba(228, 226, 161, 0.2)
+  ),
+  url(https://images.unsplash.com/photo-1529143503127-c95bdeee219a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80);
   background-attachment: fixed;
   background-size: cover;
-  
-  
   font-family: 'Raleway', sans-serif;
   color: yellow;
 }
+
 h1{
   font-size: 75px;
   margin-top: 10%;
@@ -26,19 +29,6 @@ h1{
   display: flex;
 }
 
-
-
-
-.results {
-display: flex;
-align-content: justify;
-align-items: center;
-flex-flow: wrap;
-border: chartreuse;
-border-style: solid;
-border-width: 2px;
-}
-
 #select-plant {
   font-family: 'Raleway', sans-serif;
   font-size: 25px;
@@ -50,6 +40,7 @@ border-width: 2px;
   border-style: solid;
   border-width: 2px;
   text-align: center;
+  text-transform: capitalize;
   margin: 25px;
 
 }
@@ -65,29 +56,43 @@ border-width: 2px;
   align-self: center;
 }
 
+.results {
+display: flex;
+align-content: justify;
+align-items: center;
+flex-flow: wrap;
+border: chartreuse;
+border-style: solid;
+border-width: 2px;
+}
+
+
 #append-plant {
-  /* display: flex;
-  flex-flow: column;
-  justify-content: space-around;
-  align-items: center; */
   font-size: 25px;
-  font-weight: bold;
   padding: 25px;
   margin: 25px;
 }
 
-#plant-image-container{
+img{
+  width: 300px;
+  height: auto;
   padding: 15px;
 }
 
-#common-name{
+#common-name,
+#family-name,
+#duration {
   font-variant-caps: all-small-caps;
   font-weight: 45px;
   text-align: center;
   background: black;
-  
   padding: 5px;
 }
+
+#common-name {
+  font-size: 35px;
+}
+
 
 #scientific-name{
   font-style: italic;
@@ -97,18 +102,58 @@ border-width: 2px;
   padding: 5px;
 }
 
-@media only screen and (max-width: 600px) {
-h1{
-  font-size: 25px;
+footer {
+  font-size: 18px;
+  font-variant-caps: all-small-caps;
+  margin-top: 25%;
 }
+
+a {
+  color: yellow;
+  text-decoration: none;
+}
+
+@media only screen and (max-width: 600px) {
+
+body {
+  display: flex;
+  justify-content: center;
+  flex-direction: wrap;
+  align-items: center;
+}
+
+h1{
+  font-size: 45px;
+}
+
+img {
+  width: 275px;
+  height: auto;
+}
+
+
+.results {
+ display: flex;
+ flex-flow: column;
+ justify-content: center;
+ align-items: center;
+}
+
 #button,
 #select-plant{
-  font-size: 15px;
+  display: flex;
+  flex-flow: column;
+  flex-shrink: 2;
+  font-size: 20px;
+
 }
 
 #common-name,
-#scientific-name{
-  font-size: 15px;
+#scientific-name,
+#family-name,
+#duration
+{
+  font-size: 20px;
 }
 
 }

@@ -69,6 +69,7 @@ Code Snippet:
 ```
 
 ## Wireframes
+
 [FLORA Wireframe](https://wireframe.cc/VQ6qlH)
 
 ### MVP/PostMVP
@@ -76,7 +77,7 @@ Code Snippet:
 
 - Use Axios to make a request to the Trefle API for plant information. 
 - Create a drop-down selection that allows user to select species input.
-- Render a search result that includes one image, the plant's common name, its scientific name, family name and duration(if available).
+- Render a search result that includes one image, the plant's common name, its scientific name, family name and duration (if available).
 - Plants without images will display a default image for a consistent result appearance.  
 - Deploy site using GitHub Pages for live access. 
 
@@ -95,7 +96,7 @@ Code Snippet:
 |June 9| Basic HTML, Make API Request, Begin JS | COMPLETE
 |June 10| Have selectable input with results, Begin CSS | COMPLETE
 |June 11| Finish JS, Finish Basic CSS, Finish MVP, Update Project Overview,  | COMPLETE
-|June 12| Post MVP: Media queries, Soil-based filter, Explore local storage, Refine Styling.| Incomplete
+|June 12| Post MVP: 1. Media queries 2. Soil-based filter 3. Explore local storage, 4. Refine Styling.| 1 & 4 COMPLETE
 |June 15| Present | Incomplete
 
 ## Priority Matrix
@@ -110,21 +111,53 @@ Code Snippet:
 | Base HTML | H | 2 hr | 1 hr | 1 hr |
 | Build Input/Search Bar | H | 3 hrs| 0.5 hr  | 0.5 hr |
 | Working with API | H | 5 hrs | 5 hrs | 5 hrs |
-| Build Results | H | 3 hrs | 20 hrs | 20 hrs |
+| Build Results | H | 3 hrs | 23 hrs | 23 hrs |
 | Styling with Flexbox | H | 4 hrs | 2 hrs | 2 hrs |
 | Other CSS (fonts, background, color-scheme etc.) | H | 4 hrs | 3 hrs | 3 hrs |
-| Post-MVP: Media query | H | 3 hrs | | |
-| Post-MVP: Soil Filter | H | 4 hrs | | |
-| Post-MVP: Local Storage | H | 6 hrs | | |
-| Post-MVP: Refine CSS | H | 2 hrs| | | |
-| Total | H | 40 hrs| 33.5 hrs | |
+| Post-MVP: Media query | H | 3 hrs | 1 hr | 1 hr |
+| Post-MVP: Soil Filter | H | 4 hrs | 0 hr| 0 hr|
+| Post-MVP: Local Storage | H | 6 hrs | 0 hr| 0 hr|
+| Post-MVP: Refine CSS | H | 2 hrs| | 2 hrs | 2 hrs |
+| Total | H | 40 hrs| 43.5 hrs | 43.5 |
 
 ## Code Snippet
 
-TBD
+//The code below calls the api with a specific plant id that's been selected by the user, and in turn allows for the individual plant's data to be accessed.  I chose this snippet because figuring out how to first create a dropdown by name and then access the plant by its ID (the categorical currency of my api) was a challenge. However, it forced me to get well acquanited with the way my api works and is organized, and created the opportunity for a firmer understanding of navigating and accessing its data. It also represents collaboration, especially the default image ternary, which was concieved with the help of Lia and Jeremy. 
+
+async function getPlant(plantId) {
+  try {
+    let response = await axios.get(`https://trefle.io/api/plants/${plantId}?token=TVNmand1NnNNOUx5ZjBMcW1hbzlUUT09`)
+
+    let getScientificName = response.data.scientific_name
+    let getCommonName = response.data.common_name
+    let getFamilyName = response.data.family_common_name
+    let getDuration = response.data.duration
+    let getImage = response.data.images
+
+    apiImageURL = getImage[0]? getImage[0].url : "https://images.unsplash.com/photo-1463936575829-25148e1db1b8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1090&q=80"
+    
+    removeScientificName()
+    removeCommonName()
+    removePlantImage()
+
+    commonName(getCommonName)
+    scientificName(getScientificName)
+    familyName(getFamilyName)
+    duration(getDuration)
+    plantImage(apiImageURL)
+    
+  } catch (error) {
+    console.log(`Error: ${error}`)
+  }
+    
+}
+    
+
 
 ## Change Log
 
-- Search Bar changed to dropdown selection
-- Updated information displayed to Family Common Name and Duration (if available) to provide a more taxonomic focus. 
+- Search Bar changed to dropdown selection to prompt users with options.
+- Removed "Results" title, redundant.
+- Updated information displayed to Family Common Name and Duration to provide a more taxonomic focus. 
 - Added a default image condidtion if an image is unavailable in order to keep the appearance of the results content consistent.
+
