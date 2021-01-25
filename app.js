@@ -2,16 +2,16 @@
 
 getDropdown = async () => {
   try {
-    const base_url = 'https://cors-anywhere.herokuapp.com/https://trefle.io/api/species?page_size=2000&token=TVNmand1NnNNOUx5ZjBMcW1hbzlUUT09'
+    const base_url = 'https://cors-anywhere.herokuapp.com/https://trefle.io/api/v1/species?page_size=2000&token=TVNmand1NnNNOUx5ZjBMcW1hbzlUUT09'
 
     const response = await axios.get(`${base_url}`)
-  
+
     const allPlants = response.data
 
-//Retrieve the plant names for the dropdown ------------------------
-  
+    //Retrieve the plant names for the dropdown ------------------------
+
     let namedPlants = allPlants.filter((plant) => {
-        return plant.common_name !== null && plant.is_main_species
+      return plant.common_name !== null && plant.is_main_species
     })
     const select = document.querySelector('select')
 
@@ -52,8 +52,8 @@ async function getPlant(plantId) {
     let getDuration = response.data.duration
     let getImage = response.data.images
 
-    apiImageURL = getImage[0]? getImage[0].url : "https://images.unsplash.com/photo-1463936575829-25148e1db1b8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1090&q=80"
-    
+    apiImageURL = getImage[0] ? getImage[0].url : "https://images.unsplash.com/photo-1463936575829-25148e1db1b8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1090&q=80"
+
     removeScientificName()
     removeCommonName()
     removePlantImage()
@@ -63,12 +63,17 @@ async function getPlant(plantId) {
     familyName(getFamilyName)
     duration(getDuration)
     plantImage(apiImageURL)
-    
+
   } catch (error) {
     console.log(`Error: ${error}`)
   }
-    
+
 }
+
+
+//Render a card for displaying plant info to the Dom ----------
+
+
 
 //Render the selected plant's common name to the DOM ----------
 function commonName(getCommonName) {
@@ -92,7 +97,7 @@ function familyName(getFamilyName) {
   famName.innerText = getFamilyName
   famName.setAttribute('id', 'family-name')
   document.querySelector('#append-plant').append(famName)
-} 
+}
 
 //Render the selected plant's duration to the DOM ---------------
 function duration(getDuration) {
@@ -106,9 +111,9 @@ function duration(getDuration) {
 function plantImage(apiImageURL) {
   let img = document.createElement('img')
   let div = document.querySelector('#plant-image-container')
-  div.append(img) 
+  div.append(img)
   img.src = apiImageURL
- }
+}
 
 //Remove the previously selected plant's Common Name -------------
 function removeCommonName() {
