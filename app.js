@@ -2,17 +2,16 @@
 
 getDropdown = async () => {
   try {
-    const base_url = 'https://cors-anywhere.herokuapp.com/https://trefle.io/api/v1/species?page_size=2000&token=TVNmand1NnNNOUx5ZjBMcW1hbzlUUT09'
+    const base_url = 'https://cors-anywhere.herokuapp.com/https://trefle.io/api/v1/species?&token=TVNmand1NnNNOUx5ZjBMcW1hbzlUUT09'
 
     const response = await axios.get(`${base_url}`)
 
-    const allPlants = response.data
-
+    const allPlants = response.data.data
+    console.log(allPlants)
     //Retrieve the plant names for the dropdown ------------------------
 
-    let namedPlants = allPlants.filter((plant) => {
-      return plant.common_name !== null && plant.is_main_species
-    })
+
+    let namedPlants = allPlants
     const select = document.querySelector('select')
 
     namedPlants.forEach((plant) => {
@@ -44,15 +43,15 @@ form.addEventListener('submit', plantValue)
 
 async function getPlant(plantId) {
   try {
-    let response = await axios.get(`https://cors-anywhere.herokuapp.com/https://trefle.io/api/plants/${plantId}?token=TVNmand1NnNNOUx5ZjBMcW1hbzlUUT09`)
+    let response = await axios.get(`https://cors-anywhere.herokuapp.com/https://trefle.io/api/v1/plants/${plantId}?token=TVNmand1NnNNOUx5ZjBMcW1hbzlUUT09`)
+    let plantData = response.data.data
+    let getScientificName = plantData.scientific_name
+    let getCommonName = plantData.common_name
+    let getFamilyName = plantData.family_common_name
+    let getDuration = plantData.duration
+    let getImage = plantData.image_url
 
-    let getScientificName = response.data.scientific_name
-    let getCommonName = response.data.common_name
-    let getFamilyName = response.data.family_common_name
-    let getDuration = response.data.duration
-    let getImage = response.data.images
-
-    apiImageURL = getImage[0] ? getImage[0].url : "https://images.unsplash.com/photo-1463936575829-25148e1db1b8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1090&q=80"
+    apiImageURL = getImage ? getImage : "https://images.unsplash.com/photo-1463936575829-25148e1db1b8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1090&q=80"
 
     removeScientificName()
     removeCommonName()
